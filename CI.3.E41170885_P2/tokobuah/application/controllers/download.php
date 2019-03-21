@@ -13,7 +13,7 @@ class Download extends CI_Controller {
 	}
  
 	public function lakukan_download(){				
-		force_download('gambar/malasngoding.png',NULL);
+		force_download('gambar/adsss.png',NULL);
 	}	
  
 }
