@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2019 at 04:04 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Mar 21, 2019 at 04:32 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -36,16 +36,15 @@ CREATE TABLE `tabel_barang` (
   `nama_barang` varchar(20) NOT NULL,
   `jenis_barang` varchar(20) NOT NULL,
   `harga_barang` int(20) NOT NULL,
-  `stok` int(10) NOT NULL,
-  `total_beli` int(10) NOT NULL
+  `stok` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tabel_barang`
 --
 
-INSERT INTO `tabel_barang` (`id_barang`, `id_pegawai`, `id_pelanggan`, `id_pemilik`, `nama_barang`, `jenis_barang`, `harga_barang`, `stok`, `total_beli`) VALUES
-(1, 2, 1, 1, 'galon aqua', 'galon 8L', 50000, 20, 10);
+INSERT INTO `tabel_barang` (`id_barang`, `id_pegawai`, `id_pelanggan`, `id_pemilik`, `nama_barang`, `jenis_barang`, `harga_barang`, `stok`) VALUES
+(1, 2, 1, 1, 'galon aqua', 'galon 8L', 50000, 20);
 
 -- --------------------------------------------------------
 
@@ -79,16 +78,17 @@ CREATE TABLE `tabel_pelanggan` (
   `id_pegawai` int(10) NOT NULL,
   `nama_pelanggan` varchar(50) NOT NULL,
   `alamat_pelanggan` varchar(50) NOT NULL,
-  `no_telepon_pelanggan` int(12) NOT NULL
+  `no_telepon_pelanggan` int(12) NOT NULL,
+  `total_beli` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tabel_pelanggan`
 --
 
-INSERT INTO `tabel_pelanggan` (`id_pelanggan`, `id_pegawai`, `nama_pelanggan`, `alamat_pelanggan`, `no_telepon_pelanggan`) VALUES
-(1, 2, 'ridi', 'jember', 67890),
-(2, 3, 'putra', 'bondowoso', 98765);
+INSERT INTO `tabel_pelanggan` (`id_pelanggan`, `id_pegawai`, `nama_pelanggan`, `alamat_pelanggan`, `no_telepon_pelanggan`, `total_beli`) VALUES
+(1, 2, 'rohman', 'jember', 67890, 10),
+(2, 3, 'putra', 'bondowoso', 98765, 13);
 
 -- --------------------------------------------------------
 
