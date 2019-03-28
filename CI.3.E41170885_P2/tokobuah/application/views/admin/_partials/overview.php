@@ -27,16 +27,16 @@
 
   <body id="page-top">
 
-    <!-- <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
       <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
       </button>
- -->
+
       <!-- Navbar Search -->
-<!--       <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
           <div class="input-group-append">
@@ -46,9 +46,9 @@
           </div>
         </div>
       </form>
- -->
+
       <!-- Navbar -->
-<!--       <ul class="navbar-nav ml-auto ml-md-0">
+      <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown no-arrow mx-1">
           <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-bell fa-fw"></i>
@@ -86,10 +86,7 @@
         </li>
       </ul>
 
-    </nav> -->
-  <?php
- $this->load->view('admin/_partials/navbar')
- ?>  
+    </nav>
 
     <div id="wrapper">
 
@@ -719,16 +716,13 @@
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
-        <!-- <footer class="sticky-footer">
+        <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
               <span>Copyright © Your Website 2018</span>
             </div>
           </div>
-        </footer> -->
- <?php
- $this->load->view('admin/_partials/footer')
- ?>
+        </footer>
 
       </div>
       <!-- /.content-wrapper -->
@@ -741,12 +735,46 @@
       <i class="fas fa-angle-up"></i>
     </a>
 
+    <!-- Logout Modal-->
+    <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ -->
  <?php
  $this->load->view('admin/_partials/modal')
  ?>
- 
+  <!-- Bootstrap core JavaScript-->
+  <!-- <script src="<?php echo base_url('assets/jquery/jquery.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+ -->
+  <!-- Core plugin JavaScript-->
+<!--   <script src="<?php echo base_url('assets/jquery-easing/jquery.easing.min.js') ?>"></script>
+   --><!-- Page level plugin JavaScript-->
+  <!-- <script src="<?php echo base_url('assets/chart.js/Chart.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js') ?>"></script>
+  <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap4.js') ?>"></script>
+   --><!-- Custom scripts for all pages-->
+  <!-- <script src="<?php echo base_url('js/sb-admin.min.js') ?>"></script>
+   --><!-- Demo scripts for this page-->
+  <!-- <script src="<?php echo base_url('js/demo/datatables-demo.js') ?>"></script>
+  <script src="<?php echo base_url('js/demo/chart-area-demo.js') ?>"></script>
+ -->
 <?php
- $this->load->view('admin/_partials/JS')
+ $this->load->view('admin/_partials/modal')
  ?>
 
   </body>
