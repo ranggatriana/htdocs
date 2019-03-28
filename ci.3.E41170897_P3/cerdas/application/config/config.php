@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/malasngoding/';
+$config['base_url'] = 'http://localhost/htdocs/ci.3.E41170897_P3/cerdas/';
 
 /*
 |--------------------------------------------------------------------------
