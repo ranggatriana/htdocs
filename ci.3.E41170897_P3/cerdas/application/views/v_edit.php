@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</title>
+	<title>Membuat CRUD dengan CodeIgniter</title>
 </head>
 <body>
 	<center>
-		<h1>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</h1>
+		<h1>Membuat CRUD dengan CodeIgniter</h1>
 		<h3>Edit Data</h3>
 	</center>
 	<?php foreach($user as $u){ ?>

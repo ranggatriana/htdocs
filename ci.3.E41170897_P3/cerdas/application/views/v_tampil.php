@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</title>
+	<title>Membuat CRUD dengan CodeIgniter </title>
 </head>
 <body>
-	<center><h1>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</h1></center>
+	<center><h1>Membuat CRUD dengan CodeIgniter </h1></center>
 	<center><?php echo anchor('crud/tambah','Tambah Data'); ?></center>
 	<table style="margin:20px auto;" border="1">
 		<tr>
@@ -25,7 +25,7 @@
 			<td><?php echo $u->pekerjaan ?></td>
 			<td>
 			      <?php echo anchor('crud/edit/'.$u->id,'Edit'); ?>
-                              <?php echo anchor('crud/hapus/'.$u->id,'Hapus'); ?>
+                  <?php echo anchor('crud/hapus/'.$u->id,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>
