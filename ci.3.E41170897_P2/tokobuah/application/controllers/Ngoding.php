@@ -7,7 +7,7 @@ class Ngoding extends CI_Controller {
 		$this->load->library('malasngoding');
 		$this->malasngoding->nama_saya();
                 echo "<br/>";
-                $this->malasngoding->nama_kamu("Dunia");
+                $this->malasngoding->nama_kamu("Rangga");
 	}
  
 }

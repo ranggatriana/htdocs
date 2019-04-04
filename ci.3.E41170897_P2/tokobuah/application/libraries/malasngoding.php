@@ -3,10 +3,10 @@
 class Malasngoding{
  
 	function nama_saya(){
-		echo "Nama saya adalah Ridi !";
+		echo "Nama saya adalah malasngoding !";
 	}
  
 	function nama_kamu($nama){
-		echo "Dan Saya akan Menguasai ". $nama ." !";
+		echo "Nama kamu adalah ". $nama ." !";
 	}
 }
