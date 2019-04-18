@@ -5,10 +5,10 @@ class Belajar2 extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
-		$this->load->helper('html');	
+		$this->load->helper('html');
 	}
  
-	public function index(){
+	public function index(){		
 		$this->load->view('view_belajar2');
-	}	
+	}
 }

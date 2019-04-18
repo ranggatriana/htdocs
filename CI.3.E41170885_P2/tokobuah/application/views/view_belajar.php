@@ -8,5 +8,3 @@
 	<h3><?php echo $tutorial; ?></h3>
 </body>
 </html>
-
-
