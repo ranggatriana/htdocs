@@ -7,7 +7,7 @@ class Product_model extends CI_Model
     public $product_id;
     public $name;
     public $price;
-    public $image = "default.jpg";
+    public $image = "polije.jpg";
     public $description;
 
     public function rules()
@@ -16,6 +16,7 @@ class Product_model extends CI_Model
             ['field' => 'name',
             'label' => 'Name',
             'rules' => 'required'],
+
 
             ['field' => 'price',
             'label' => 'Price',
@@ -87,7 +88,7 @@ private function _uploadImage()
         return $this->upload->data("file_name");
     }
     
-    return "default.jpg";
+    return "polije.jpg";
 
 }
 
