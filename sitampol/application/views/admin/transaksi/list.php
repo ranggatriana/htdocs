@@ -25,7 +25,7 @@
           <!-- DataTables Example -->
           <div class="card mb-3">
             <div class="card-header">
-              <a href="<?php echo site_url('admin/kategori/add') ?>"><i class="fas fa-plus"></i> Tambah Kategori</a>
+              Laporan Transaksi
               </div>
            <div class="card-body">
               <div class="table-responsive">
@@ -33,27 +33,35 @@
                   <thead>
                     <tr>
 
-                      <th>Kategori</th>
-                      <th>Tindakan</th>
+                      <th>Tanggal Transaksi</th>
+                      <th>Nama Pelanggan</th>
+                      <th>Nama Pelanggan</th>
+                      <th>Harga Barang</th>
+                      <th>Jumlah Barang</th>
                                             
                     </tr>
                   </thead>
                   <tbody>
 
-                    <?php foreach ($kategori as $kategori):?>
+                    <?php foreach ($view_transaksi as $transaksi):?>
                     <tr>
                       <td>
-                        <?php echo $kategori->nama_kategori ?>
+                        <?php echo $transaksi->tanggal_transaksi ?>
+                      </td>
+                      <td>
+                        <?php echo $transaksi->nama_pelanggan?>
+                      </td>
+                      <td>
+                        <?php echo $transaksi->nama_barang?>;
+                      </td>
+                      <td>
+                        <?php echo $transaksi->harga_barang?>
+                      </td>
+                      <td>
+                        <?php echo $transaksi->jumlah_barang?>
                       </td>
                       
-                      </td>
-                       <td width="250">
-                        <a href="<?php echo site_url('admin/kategori/edit/'.$kategori->id_kategori) ?>"
-                       class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-                        <a onclick="deleteConfirm('<?php echo site_url('admin/kategori/delete/'.$kategori->id_kategori) ?>')"
-                         href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
-                      </td>
-                      
+                      </td>                      
                     </tr>
                   <?php endforeach?>
                     

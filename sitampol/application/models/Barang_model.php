@@ -3,7 +3,7 @@
 class Barang_model extends CI_Model
 {	
 	private $_table = "tabel_barang";
-	private $_table2 = "tabel_barang";
+	private $_view = "view_barang";
 	
 	public $id_barang;
 	public $nama_barang;
@@ -15,11 +15,11 @@ class Barang_model extends CI_Model
 	{
 		return [
 			['field'=>'nama_barang',
-			'label'=>'Name',
+			'label'=>'nama_barang',
 			'rules'=>'required'],
 
 			['field'=>'harga_barang',
-			'label'=>'Price',
+			'label'=>'harga_barang',
 			'rules'=>'required']
 
 		];	# code...
@@ -27,12 +27,12 @@ class Barang_model extends CI_Model
 
 	public function getAll()
 	{
-		return $this->db->get($this->_table)->result();
+		return $this->db->get($this->_view)->result();
 	}
 
 	public function getById($id)
 	{
-		return $this->db->get($this->_table, ["id_barang" => $id])->row();
+		return $this->db->get_where($this->_table, ["id_barang" => $id])->row();
 	}
 
 	public function save()
@@ -53,6 +53,7 @@ class Barang_model extends CI_Model
 		$this->harga_barang = $post["harga_barang"];
 		$this->stok = $post["stok"];
 		$this->$id_kategori = $post["id_kategori"];
+		
 		$this->db->update($this->_table,$this, array('id_barang' =>$post['id']));
 	}
 

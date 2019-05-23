@@ -15,7 +15,7 @@ class Barang extends CI_Controller
 
 	public function index()
 	{
-		$data["tabel_barang"] = $this->barang_model->getAll();
+		$data["view_barang"] = $this->barang_model->getAll();
 		$this->load->view("admin/barang/list",$data);
 	}
 	public function add()
@@ -31,6 +31,25 @@ class Barang extends CI_Controller
 		}
 
 		$this->load->view("admin/barang/new_form");
+	}
+
+	public function edit($id = null)
+	{
+		if (!isset($id)) redirect('admin/barang');
+
+		$barang = $this->barang_model;
+		$validation = $this->form_validation;
+		$validation->set_rules($barang->rules());
+		
+		if ($validation->run()) {
+			$barang->update();
+			$this->session->set_flashdata('success', 'Berhasil Disimpan');
+		}
+
+		$data["tabel_barang"] = $barang->getById($id);
+		if (!$data["tabel_barang"]) show_404();
+
+		$this->load->view("admin/barang/edit_form", $data); 
 	}
 
 	public function delete($id=null)

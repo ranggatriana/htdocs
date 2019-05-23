@@ -22,22 +22,22 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="<?php echo site_url('admin/barang')?>">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Kelola Barang</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="<?php echo site_url('admin/pemesanan')?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Kelola Pemesanan</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="<?php echo site_url('admin/kategori')?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Kelola Kategori</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="<?php echo site_url('admin/transaksi')?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Lihat Transaksi</span></a>
         </li>

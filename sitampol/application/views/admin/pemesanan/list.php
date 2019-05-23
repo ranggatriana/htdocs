@@ -25,7 +25,7 @@
           <!-- DataTables Example -->
           <div class="card mb-3">
             <div class="card-header">
-              <a href="<?php echo site_url('admin/kategori/add') ?>"><i class="fas fa-plus"></i> Tambah Kategori</a>
+              Kelola Pemesanan
               </div>
            <div class="card-body">
               <div class="table-responsive">
@@ -33,25 +33,27 @@
                   <thead>
                     <tr>
 
-                      <th>Kategori</th>
-                      <th>Tindakan</th>
+                      <th>Nama Pelanggan</th>
+                      <th>Nama Barang</th>
+                      <th>Jumlah Pesan</th>
+                      <th>Status</th>
                                             
                     </tr>
                   </thead>
                   <tbody>
 
-                    <?php foreach ($kategori as $kategori):?>
+                    <?php foreach ($view_pemesanan as $pemesanan):?>
                     <tr>
                       <td>
-                        <?php echo $kategori->nama_kategori ?>
+                        <?php echo $pemesanan->nama_pelanggan ?>
+                      </td>
+                      <td>
+                        <?php echo $pemesanan->nama_barang ?>
+                      </td>
+                      <td>
+                        <?php echo $pemesanan->jumlah_pesan ?>
                       </td>
                       
-                      </td>
-                       <td width="250">
-                        <a href="<?php echo site_url('admin/kategori/edit/'.$kategori->id_kategori) ?>"
-                       class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-                        <a onclick="deleteConfirm('<?php echo site_url('admin/kategori/delete/'.$kategori->id_kategori) ?>')"
-                         href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
                       </td>
                       
                     </tr>

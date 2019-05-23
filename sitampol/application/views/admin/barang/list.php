@@ -43,7 +43,7 @@
                   </thead>
                   <tbody>
 
-                    <?php foreach ($tabel_barang as $barang):?>
+                    <?php foreach ($view_barang as $barang):?>
                     <tr>
 
                       <td>
@@ -53,7 +53,7 @@
                         <?php echo $barang->harga_barang ?>
                       </td>
                       <td>
-                        <?php echo $barang->id_kategori ?>
+                        <?php echo $barang->nama_kategori ?>
                       </td>
                       <td>
                         <?php echo $barang->stok ?>

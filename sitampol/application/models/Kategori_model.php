@@ -23,7 +23,7 @@ class Kategori_model extends CI_Model
 
 	public function getById($id)
 	{
-		return $this->db->get($this->_table, ["id_kategori" => $id])->row();
+		return $this->db->get_where($this->_table, ["id_kategori" => $id])->row();
 	}
 
 	public function save()
@@ -38,7 +38,8 @@ class Kategori_model extends CI_Model
 		$post = $this->input->post();
 		$this->id_kategori = $post["id"];
 		$this->nama_kategori = $post["nama_kategori"];
-		$this->db->update($this->_table,$this, array('id_kategori' =>$post['id']));
+		
+		$this->db->update($this->_table, $this, array('id_kategori' => $post['id']));
 	}
 
 	public function delete($id)
