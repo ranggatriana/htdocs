@@ -1,5 +1,6 @@
 package com.example.sitampol;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,6 +12,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.sitampol.Fragment.BeliFragment;
+import com.example.sitampol.Fragment.HomeFragment;
+import com.example.sitampol.Fragment.PesanFragment;
+import com.example.sitampol.Fragment.ProfileFragment;
 import com.example.sitampol.Tab.MyAdapter;
 import com.example.sitampol.Tab.SlidingTabLayout;
 import com.mikepenz.materialdrawer.Drawer;
@@ -47,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 .withSavedInstance(savedInstanceState)
                 .withHeaderBackground(R.color.primary)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Kebutuhan Ayam").withIcon(getResources().getDrawable(R.drawable.iicon))
+                        new ProfileDrawerItem().withName("Kebutuhan Ayam").withIcon(getResources().getDrawable(R.drawable.usericon))
                 )
                 .build();
         navigationDrawerLeft = new Drawer()
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         navigationDrawerLeft.addItem(new ProfileDrawerItem().withName("Profile").withIcon(getResources().getDrawable(R.drawable.ic_account_black_24dp)));
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -75,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar EndangeredItem clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
